@@ -6,11 +6,12 @@ def main():
     num_rows = 15
     num_cols = 15
     margin = 50
-    screen_x = 800
-    screen_y = 800
+    screen_x = 1000
+    screen_y = 1000
     win = Window(screen_x,screen_y)
     cell_size = min(((screen_x-2*margin)//num_cols),((screen_y-2*margin)//num_rows))
     maze = Maze(margin,margin,num_rows,num_cols,cell_size,cell_size,win)
+    maze.solve()
     win.wait_for_close()
 
     

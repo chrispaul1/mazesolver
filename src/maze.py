@@ -34,13 +34,6 @@ class Maze:
         top_left_y = self.y1 + self.cell_size_y*i
         bottom_right_x = top_left_x + self.cell_size_x
         bottom_right_y = top_left_y + self.cell_size_y
-        # if i==0 and j == 0:
-        #     self.cells[i][j].draw(top_left_x,top_left_y,bottom_right_x,bottom_right_y,"red")
-        # elif i == 1 and j == 0:
-        #     self.cells[i][j].draw(top_left_x,top_left_y,bottom_right_x,bottom_right_y,"blue")
-        # elif i == 0 and j == 1:
-        #     self.cells[i][j].draw(top_left_x,top_left_y,bottom_right_x,bottom_right_y,"green")
-        # else:
         self.cells[i][j].draw(top_left_x,top_left_y,bottom_right_x,bottom_right_y)
 
     def _animate(self):
@@ -112,7 +105,7 @@ class Maze:
                 self.cells[i][j].visited = False
 
     def solve(self):
-         return self._solve_r(self,0,0)
+         return self._solve_r(0,0)
 
     def _solve_r(self,i,j):
         self._animate()
